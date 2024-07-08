@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.table-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.student-table thead {
+    background: #007BFF;
+    color: #fff;
+}
+
+.student-table th,
+.student-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.student-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 600px) {
+    .student-table thead {
+        display: none;
+    }
+    
+    .student-table, .student-table tbody, .student-table tr, .student-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .student-table tr {
+        margin-bottom: 15px;
+    }
+
+    .student-table td {
+        text-align: right;
+        padding-left: 15%;
+        position: relative;
+    }
+
+    .student-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .student-table img {
+        display: block;
+        margin: 0 auto 10px;
+    }
+}
